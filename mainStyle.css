@@ -1,0 +1,193 @@
+@charset "utf-8";
+/* CSS Document */
+body{  
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px; margin:0; color: #2a2a2a;
+}
+a{ color:black ; text-decoration: none}
+a:hover { color:#FF7600}
+p{ line-height: 1.5em;color:#aaaaaa}
+h1,h2,h3 { margin-bottom: 0;color: #2a2a2a; display: block}
+h1{ font-size: 2rem;}
+nav{border-bottom: 1px dashed #ddd;position:sticky;
+  	top:0;background:#fff;z-index:9999999}
+
+section{ 
+	padding: 25px 0;
+	border-bottom: 1px solid #ddd
+}
+/*---- style cho button có hiệu ứng chạy tràn màu khi hover---*/
+.abtn{ position: relative } /* khung bao ngoài button a*/
+.btn{ 
+	border: 2px solid #333; padding: 5px 20px; 
+	color: #333; position: relative; 
+	overflow: hidden; display: inline-block;
+	padding-right: 30px
+}
+.inside{
+	position: absolute; left: 0; bottom: 0; 
+	width: 0%; height: 100%; background: #000; 
+	transition: all 0.5s; z-index: -1; transform: rotate(45deg)
+}
+.btn:hover{
+	color: #fff; border-color:#eee; align-items: center 
+}
+.btn:hover >.inside{ 
+	width: 300%; height: 450%; left: -150%
+}
+.item-dm{position: relative;overflow: hidden}
+.item-detail{position: absolute;top:31%;left:13%;color:white}
+.item-detail .btn-detail{padding:15px 30px}
+.item-detail h1{font-size:3.2em}
+.item-detail h1,.item-detail p, .item-detail-1 h2,.item-detail-1 p, .item-detail-hover-1 h2 ,.item-detail-hover-1 p{color:white;}
+.btn-detail{border: 1px solid white;padding:12px 17px;color:white;font-size:0.8em;transition:all .5s}
+.btn-detail:hover{background:white;border:none;color:black}
+.item-detail-1{position: absolute;left:0;top:35%;color:white;width:100%;padding:0 60px}
+
+.item-detail-hover-1{color:white;background:rgba(42,42,42,.97);;position:absolute;
+					width:80%;height:80%;top:10%;left:10%;padding:10%;
+					transition:all 1s;transform:rotateY(-180deg);backface-visibility:hidden;}
+.item-dm:hover > .item-detail-hover-1{
+	opacity:1;transform:scale(1)rotate(360deg);
+}
+
+.product-name{
+	display:flex;justify-content: space-between;align-items: center;margin-top: 20px;}
+.product-name h3{margin:0;font-size:1.3em}
+.product-name i{color:#2a2a2a;font-size:0.7em}
+.price{font-size:27px;font-weight: 900;color:#969696}
+.product{position:relative}
+.product p{font-weight:400;font-size:1.2em;margin:5px 0}
+.product .i-shopping{position: absolute;left:0;top:66%;display:flex;justify-content:center;width:100%;opacity:0;transition:all 1s;}
+.product .i-shopping .outline{background:white;margin:13px;padding:15px}
+.product:hover > .i-shopping{opacity:1;top:50%}
+.menu{margin-top:12px}
+.menu ul{display:flex;margin:0;padding:0;list-style:none}
+.menu ul li{position:relative}
+.menu ul li a{font-size:15px;padding:10px 15px;display:block;letter-spacing: 1px;
+}
+.menu ul li a:hover{color:#FF7600}
+.menu ul ul{flex-direction:column;position:absolute;z-index:999;
+			background:#f7f7f7;box-shadow:0 3px 5px #9999;
+			transition:all 0.5s;top:200%;opacity:0;visibility:hidden;width:200px;}
+.menu ul ul a{font-size:0.8em;padding:15px}
+.menu ul ul a:hover{color:black;background:#fff}
+.menu ul ul li{border-bottom: 1px solid #eee;}
+.menu ul ul li a:hover{padding-left:20px;font-weight:bold}
+.menu ul li:hover > ul{top:100%;opacity:1;visibility:visible}
+.bottom-line-hover{border-bottom:#FF7600 3px solid;transform:scaleX(0);transition:all 0.5s;}
+.menu ul li:hover >.bottom-line-hover{border-bottom:#FF7600 3px solid;transform:scaleX(1);}
+main{min-height:500px}
+.input-form{padding:15px;width:37%;margin-right:30px;margin-top:20px;font-size:1em;border:1px solid #666;font-style:italic}
+.btn-form{padding:15px;font-size:1em;color:white;background:black;border:none;cursor: pointer}
+footer{min-height:600px;padding:50px 0;color:white;background:#333}
+footer h2{color:white;padding-bottom:20px;font-size:1.3em}
+footer .logo-footer i{margin-right:13px;}
+footer p,footer p a{display:block;color:white;margin:15px 0}
+footer p a:hover{color:#666}
+.border-top{border-top:1px solid #ddd}
+.branding a{margin:30px 13px;font-size:20px}
+.copyright a, .branding a{color:#cff;}
+.branding a:hover,.copyright a:hover{color:#FF5413}
+.copyrigh{line-height: 20px}
+/*----------- Landing Page (END HERE)----------------------*/
+
+
+/*----------- About Us Pages----------------------*/
+#banner-title{
+	background:url("../images/about-us-page-heading.jpg");
+	background-size:cover;
+	padding:140px;
+	color:white;
+}
+#banner-title h1{color:white;font-size:3.2em}
+#banner-title p{color:white;margin:10px}
+#our-skills .left-image{margin-right:40px}
+#our-skills .right-text{padding-bottom: 20px;border-bottom: 1px dotted #B2B2B2;margin-left:30px}
+#our-skills .right-text h1{margin-top:0;font-size:2.2em}
+#our-skills .right-text p{font-size:0.9em;line-height:1.7em}
+.circle-icon{margin-left:30px}
+.circle-icon .icon{
+	margin-right:15px;
+	width:45px;
+	height:45px;
+	background-color:#2a2a2a;
+	color:white;
+	border-radius:50%;
+	line-height: 45px;
+	text-align: center;
+	transition: all .5s;
+}
+.circle-icon .icon:hover{
+	color:black;background:#D7D7D7
+}
+#our-team .team-item {margin:0}
+#our-team .team-item p{margin-top:5px}
+#our-team .headline p,#our-service .headline p{margin-top:10px; }
+#our-team .team-item .image{
+	position: relative
+}
+#our-team .team-item .black-hover {
+	position: absolute;text-align:center;
+	background-color: rgba(0,0,0,0.9);
+	top:0;left:0;right:0;bottom:0;
+	opacity: 0;
+    visibility: hidden;
+	transition: all .5s;
+}
+#our-team .team-item .image:hover > .black-hover{visibility:visible;opacity:1}
+#our-team .team-item .black-hover .circle-icon{position: absolute;top:43%;width:100%;margin:0}
+#our-team .team-item .black-hover .icon{color:#2a2a2a;background:white;margin:10px}
+#our-team .team-item .black-hover .icon:hover{background:#2a2a2a;color:white}
+
+#our-service .service-item {box-shadow: 0px 0px 15px rgb(0,0,0,0.2);padding:40px}
+#our-service .service-item p{line-height: 25px;font-size:0.85em;color:black;}
+
+#our-team h1 , #our-service h1 {font-size:2.2em}
+
+/*----------- About Us Page (END HERE)----------------------*/
+
+
+/*----------- Single Product Pages----------------------*/
+
+#banner-title-1{
+	background:url("../images/products-page-heading.jpg");
+	background-size:cover;
+	padding:140px;
+	color:white;
+}
+#banner-title-1 h1{color:white;font-size:3.2em}
+#banner-title-1 p{color:white;margin:10px}
+
+#single-product .product-name {margin:0}
+#single-product p{font-weight:400;font-size:1.2em;margin:5px 0}
+#single-product .top-price-text{border-bottom: 1px dotted #B2B2B2;padding-bottom:25px}
+#single-product .bottom-text p{line-height: 25px;font-size:0.85em;}
+.bottom-text{border-bottom: 1px dotted #B2B2B2;padding-bottom:25px}
+.left-content p{font-weight: 900 !important}
+.right-content .quantity{border:1px solid #EBEBEB;width:40px;height:40px;text-align:center;line-height:40px;cursor:pointer}
+.right-content .quantity i{font-size:0.6em;}
+.right-content .hover-order:hover{background:#E0E0E0}
+.total button{height:50px;padding:0 30px;text-align:right;background:none;border:1px solid #2a2a2a;cursor: pointer}
+.total button:hover{background:#2a2a2a;color:#fff}
+.total p{font-weight: 900 !important}
+
+
+/*----------- Single Product (END HERE)----------------------*/
+
+
+
+/*----------- Contact Us Pages----------------------*/
+.map-form-top .input-form {width:47%;padding:14px;font-size:0.9em;margin:0}
+.message{padding:15px;width:100%;height:130px;margin-top:30px;font-size:0.85em;border:1px solid #666;font-family: 'Poppins', sans-serif;font-style:italic}
+.map-right-text h1{margin:0}
+.map-right-text p{margin-top:5px;font-size:0.9em}
+
+/*----------- Contact Us Pages (END HERE)----------------------*/
+
+
+/*----------- Products Pages----------------------*/
+.products-page-title p{margin:0;font-size:0.9em}
+.pagnigation .pagni-number{border:1px solid black;width:45px;height:45px;line-height:45px;text-align:center;margin:0 10px;cursor:pointer}
+.pagnigation .pagni-number:hover{background:black;color:white}
+.pagni-active{background:black;color:white}
